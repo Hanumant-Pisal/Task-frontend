@@ -3,7 +3,7 @@ import axios from "axios";
 
 const API_URL = `${import.meta.env.VITE_BACKEND_URL}/api/auth`;
 
-// Signup User
+
 export const signupUser = createAsyncThunk("auth/signupUser", async (userData, { rejectWithValue }) => {
   try {
     const response = await axios.post(`${API_URL}/register`, userData);
@@ -13,12 +13,12 @@ export const signupUser = createAsyncThunk("auth/signupUser", async (userData, {
   }
 });
 
-// Signin User
+
 export const signinUser = createAsyncThunk("auth/signinUser", async (userData, { rejectWithValue }) => {
   try {
     const response = await axios.post(`${API_URL}/login`, userData);
     
-    // Save user data and token in localStorage
+    
     localStorage.setItem("token", response.data.token);
     localStorage.setItem("user", JSON.stringify(response.data.user));
 
@@ -28,7 +28,7 @@ export const signinUser = createAsyncThunk("auth/signinUser", async (userData, {
   }
 });
 
-// Logout User
+
 export const logoutUser = () => {
   localStorage.removeItem("token");
   localStorage.removeItem("user");
@@ -36,7 +36,7 @@ export const logoutUser = () => {
 };
 
 const initialState = {
-  user: JSON.parse(localStorage.getItem("user")) || null,  // Retrieve user from localStorage
+  user: JSON.parse(localStorage.getItem("user")) || null,  
   token: localStorage.getItem("token") || null,
   loading: false,
   error: null,

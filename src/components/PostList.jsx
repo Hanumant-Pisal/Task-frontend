@@ -123,7 +123,7 @@ const PostList = () => {
       <Modal
         isOpen={isEditModalOpen}
         onRequestClose={() => setIsEditModalOpen(false)}
-        className="bg-zinc-800 p-6 rounded-lg shadow-lg w-full max-w-lg mx-auto mt-8"
+        className="bg-zinc-800 p-6 rounded-lg shadow-lg w-full max-w-lg mx-auto "
         overlayClassName="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
       >
         <h2 className="text-2xl font-bold mb-4 text-white">Edit Post</h2>
@@ -163,13 +163,13 @@ const PostList = () => {
             className="border p-2 w-full rounded bg-zinc-900 text-white"
           />
           <div className="flex gap-2">
-            <button type="submit" className="bg-green-500 text-white p-2 rounded">
+            <button type="submit" className="bg-green-500 ml-8 cursor-pointer hover:bg-white hover:text-black transition-all duration-300 text-white w-[200px] p-2 rounded">
               Save
             </button>
             <button
               type="button"
               onClick={() => setIsEditModalOpen(false)}
-              className="bg-red-500 text-white p-2 rounded"
+              className="bg-red-500 text-white p-2 w-[200px] cursor-pointer hover:bg-white hover:text-black transition-all duration-300 rounded"
             >
               Cancel
             </button>

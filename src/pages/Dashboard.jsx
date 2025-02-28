@@ -50,7 +50,7 @@ const Dashboard = () => {
      
       <div className="container mx-auto px-4 py-8">
       
-        <div className="flex justify-center mb-10 ml-40">
+        <div className="flex justify-center mb-10 ">
           <button
             onClick={() => setIsModalOpen(true)}
             className="bg-blue-500 text-white px-6 py-2 rounded-lg font-bold hover:bg-blue-600 transition"
